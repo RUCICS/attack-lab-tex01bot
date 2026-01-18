@@ -83,6 +83,7 @@ payload 的结构如下：
 
 其中：padding 用于填充至返回地址，共 16 字节;地址需按小端序写入;对应的 Python payload 构造代码如下：
 ```py
+# answer1.py
 import struct
 
 payload  = b"A" * 16
@@ -181,6 +182,7 @@ padding(16 bytes)
 
 Payload代码：
 ```py
+# answer2.py
 import struct
 
 OFFSET = 16
@@ -327,6 +329,7 @@ jmp_xs = 0x401334
 
 Payload代码：
 ```py
+# answer3.py
 import struct
 
 OFFSET_RET = 0x28
